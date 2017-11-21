@@ -7,7 +7,7 @@ import static sh.common.DbConfig.*;
 import sh.common.*;
 
 
-public class DbServerClient {
+public class DbRmiServerContactClient {
 	
 	public static void main(String[] args) {
 		try {

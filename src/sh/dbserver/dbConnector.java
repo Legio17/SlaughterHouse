@@ -7,15 +7,19 @@ import java.sql.Statement;
 
 public class dbConnector {
 	
+	public static void main(String[] args) {
+		connectToDbServer();
+	}
+	
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
 	static final String DB_URL = "jdbc:mysql://localhost/slaughterhousedb";
 
 	//  Database credentials
-	static final String USER = "username";
-	static final String PASS = "password";
+	static final String USER = "root";
+	static final String PASS = "localhost";
 	
-	public void connectToDbServer(){
+	public static void connectToDbServer(){
 		Connection conn = null;
 		Statement stmt = null;
 		
@@ -28,7 +32,7 @@ public class dbConnector {
 		      conn = DriverManager.getConnection(DB_URL,USER,PASS);
 		      
 		      //STEP 6: Clean-up environment
-		      stmt.close();
+//		      stmt.close();
 		      conn.close();
 		      
 		}catch(SQLException se){
